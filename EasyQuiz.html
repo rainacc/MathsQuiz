@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="MathsQuiz.css">
+    <script src="MathsQuiz.js"></script>
+</head>
+<body class="background" >
+
+<!--Title-->
+<h1 id="easy">EASY MODE</h1>
+<!--Score Board-->
+<table id="scoreTable">
+    <tr>
+        <td><h2>Score: </h2></td>
+        <td><canvas id="scoringBoard" width="50" height="50"></canvas></td>
+    </tr>
+</table>
+
+<!--Insert one-minute timer-->
+<h3>Quiz ends in <span id="time">01:00</span> seconds</h3>
+<script>
+    function startTimer(duration, display) {
+        let timer = duration, minutes, seconds;
+        setInterval(function() {
+            minutes = parseInt(timer / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+            display.textContent = minutes + ":" + seconds;
+            //When time ends, show the ending page//
+            if (--timer < 0) {
+                timer = 0;
+                endingPage()
+            }
+        }, 1000);
+    }
+    //Onload two event handlers together: Timer & The quiz//
+    window.onload=function(){
+        //onload timer for one min//
+        let  oneMinute = 60, display = document.querySelector('#time');
+        startTimer(oneMinute, display);
+
+        //-onload quiz content"//
+        easyQuiz();
+    }
+</script>
+
+<!--(Hidden) Ending words, Appears after the quiz is done-->
+<h1 id="welldone" class="hidden">YOU FINISHED! WELL DONE!</h1>
+<h2 id="question"> Question</h2>
+<canvas id="questionScreen" width="350" height="120"></canvas>
+
+<!--User enter space-->
+<p id="notes">Enter your answer below</p>
+<label><input type="text" id="answerBox" name="answer" size="20" maxlength="10"></label>
+<br>
+
+<!--Click to go to the next question-->
+<button type="button" id="next" onclick="checkAnswer('easy')"> NEXT</button>
+
+<!--After finishing the quiz, give option to go back to the quiz home page-->
+<a href ="MathsQuiz.html" id="end" class="hidden"><h2>TRY AGAIN</h2></a>
+<br>
+
+
+</body>
+</html>

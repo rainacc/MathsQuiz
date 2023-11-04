@@ -1,0 +1,142 @@
+/*Colour palette*/
+/*red: ED254E*/
+/*yellow: F9DC5C*/
+/*green: C2EABD*/
+/*dark blue: 0b5394*/
+/*grey blue: 3d85c5*/
+html{
+    text-align:center;
+}
+
+.background {
+    background-color: #9fc5e9;
+}
+
+h1{
+    font-family: "Arial Rounded MT Bold", fantasy;
+    font-size:3em;
+    font-weight:300;
+    color: #0b5394;
+}
+
+h2{
+    font-family: "Arial Black" ,sans-serif;
+    font-size:1.5em;
+    color:#3d85c5;
+}
+
+h3{
+    font-family: "Arial" ,sans-serif;
+}
+
+p{
+    font-family: "Arial" ,sans-serif;
+    font-size:1.5em;
+    color:#011936;
+    margin:0.5em;
+}
+
+#easy{
+    font-family: "Arial", fantasy;
+    font-size:3em;
+    color:black;
+    background-color:#C2EABD;
+    margin:1em;
+    text-align:center;
+    border: 4px solid seagreen;
+}
+
+#normal{
+    font-family: "Arial", fantasy;
+    font-size:3em;
+    color:black;
+    background-color:#F9DC5C;
+    margin:1em;
+    text-align:center;
+    border: 4px solid orange;
+}
+
+#hard{
+    font-family: "Arial", fantasy;
+    font-size:3em;
+    color: black;
+    background:#ED254E;
+    margin:1em;
+    text-align:center;
+    border: 4px solid darkred;
+}
+
+#next{
+    font-family: "Arial Rounded MT Bold", sans-serif;
+    font-size:2em;
+    color: black;
+    background-color: white;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:1em;
+}
+
+#end{
+    font-family: "Arial Rounded MT Bold", sans-serif;
+    font-size:2em;
+    color: #0b5394;
+    background-color: white;
+    text-align: center;
+    border: 2px dodgerblue;
+}
+
+#table{
+    border:3px dashed;
+    color:#465362;
+    margin:2em auto 2em auto;
+    padding: 2em;
+}
+
+#scoreTable{
+    margin:0.2em;
+    padding:.2em;
+    border:3px dotted dodgerblue;
+}
+
+#answerBox{
+    border:3px solid;
+    block-size: 2em;
+    color:black;
+    text-align: center;
+    margin-bottom: 1em;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#questionScreen {
+    border:5px solid;
+    color:dimgrey;
+    margin-bottom: 1em;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#scoringBoard{
+    border:3px solid;
+    color:#0b5394;
+    align-content: center;
+    display:inline;
+}
+
+#time{
+    font-family: "Arial Rounded MT Bold", sans-serif;
+    font-size:1.5em;
+    color: darkred;
+}
+
+.hidden {
+    display:none;
+}
+
+.show {
+    display:block;
+}
+
+input{
+    font-size:1.5em;
+}
